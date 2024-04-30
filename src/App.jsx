@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import Header from './components/header/Header'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, HashRouter } from 'react-router-dom'
 import Home from './pages/Home'
 import About from './pages/About'
 import Blog from './pages/Blog'
@@ -12,7 +12,7 @@ function App() {
 
   return (
     <>
-    <BrowserRouter>
+    <HashRouter>
     <Header/>
     <Routes>
       <Route path="/" element={<Home />} />
@@ -22,7 +22,7 @@ function App() {
       <Route path="/contact" element={<Contact />} />
       <Route path="/*" element={<NotFound />} />
     </Routes>
-    </BrowserRouter>
+    </HashRouter>
        
     </>
   )
